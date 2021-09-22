@@ -166,23 +166,9 @@ Service provider-ni `config/app.php`  ro'yxatga olish:
 ```bash
 //...
 'providers' => [
-
-        /*
-         * Laravel Framework Service Providers...
-         */
         //...
-
-        /*
-         * Package Service Providers...
-         */
-
         App\Providers\FactoryServiceProvider::class,
-
-        /*
-         * Application Service Providers...
-         */
         //...
-
     ],
 //...
 ```
