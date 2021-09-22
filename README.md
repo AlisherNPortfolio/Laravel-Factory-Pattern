@@ -76,7 +76,7 @@ interface IShopManager
 }
 ```
 
-`app\Factories\ShopFactory\ShpManager.php`:
+`app\Factories\ShopFactory\ShopManager.php`:
 
 ```bash
 class ShopManager implements IShopManager
@@ -133,7 +133,7 @@ Yuqoridagi klasdagi `ShopManager`-ning `make` metodida `shops` array-ini tekshir
 
 ###### Factory-ni container ro'yxatiga qo'shamiz
 
-Buning uchun yoki AppServiceProvider-da yoki yangi service provider ochib factory-ni ro'yxatga olish mumkin. Agar, factory klaslar soni ko'p bo'ladigan bo'lsa, alohida FactoryServiceProvider nomli service provider ochgan yaxshi (`php artisan make:provider FactoryServiceProvider`):
+Buning uchun yoki `AppServiceProvider`-da yoki yangi service provider ochib factory-ni ro'yxatga olish mumkin. Agar, factory klaslar soni ko'p bo'ladigan bo'lsa, alohida `FactoryServiceProvider` nomli service provider ochgan yaxshi (`php artisan make:provider FactoryServiceProvider`):
 
 ```bash
 class FactoryServiceProvider extends ServiceProvider
@@ -162,7 +162,30 @@ class FactoryServiceProvider extends ServiceProvider
 }
 ```
 
-Service provider-ni `config/app.php`  ro'yxatga olish
+Service provider-ni `config/app.php`  ro'yxatga olish:
+```bash
+//...
+'providers' => [
+
+        /*
+         * Laravel Framework Service Providers...
+         */
+        //...
+
+        /*
+         * Package Service Providers...
+         */
+
+        App\Providers\FactoryServiceProvider::class,
+
+        /*
+         * Application Service Providers...
+         */
+        //...
+
+    ],
+//...
+```
 
 
 ### Testlash
