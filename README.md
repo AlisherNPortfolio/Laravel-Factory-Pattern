@@ -162,7 +162,7 @@ class FactoryServiceProvider extends ServiceProvider
 }
 ```
 
-Service provider-ni config/app.php  ro'yxatga olish
+Service provider-ni `config/app.php`  ro'yxatga olish
 
 
 ### Testlash
